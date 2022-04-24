@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+
 const Section = styled.div`
   display: flex;
   flex-direction: column;
+
   justify-content: center;
   width: 80%;
   height: 100vh;
@@ -29,8 +31,10 @@ interface BookListProps {
   id: string;
   bookTitle: string;
 }
+
 function Category() {
-  const [bookList, setBookList] = useState([]);
+  const [bookList, setBookList] = useState<BookListProps[]>([]);
+
   useEffect(() => {
     fetch("http://localhost:3001/data/bookList.json", {})
       .then((response) => response.json())
@@ -45,7 +49,9 @@ function Category() {
         Category{" "}
         <GridContainer>
           {" "}
-          {/* {bookList.map((el) => ( <GridItem key={el.id}>{el.bookTitle}</GridItem> ))} */}{" "}
+          {bookList.map((el) => (
+            <GridItem key={el.id}>{el.bookTitle}</GridItem>
+          ))}{" "}
           <GridItem>dd</GridItem> <GridItem>dd</GridItem>{" "}
           <GridItem>dd</GridItem> <GridItem>dd</GridItem>{" "}
           <GridItem>dd</GridItem>{" "}
