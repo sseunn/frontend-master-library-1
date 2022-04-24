@@ -16,13 +16,13 @@ const FlexWrapper = styled.div`
   height: auto;
   /* margin: 3%; */
   padding: 5%;
-  border: 1px solid black;
+
   /* margin-top: 10px; */
 `;
 
 const Left = styled.div`
   background-color: #b2bec3;
-  border: 2px solid black;
+
   width: 18rem;
   height: 19rem;
 `;
@@ -34,7 +34,6 @@ const Cover = styled.div`
 `;
 
 const Right = styled.div`
-  border: 1px solid black;
   width: 80%;
   height: 80%;
   margin: 5%;
@@ -117,7 +116,7 @@ function Detail() {
     <div>
       <Container>
         <FlexWrapper>
-          {bookList.map((list) =>
+          {/* {bookList.map((list) =>
            {Object.entries(list).map(([key, value]) => ( 
             return (
               <List
@@ -125,9 +124,8 @@ function Detail() {
                 name={list.bookSubTitle}
                 comment={list.author}
               />
-            );
-            console.log(list);
-          )}
+            ); */}
+
           <Left>
             <Cover></Cover>
           </Left>
